@@ -26,8 +26,7 @@ export default function HomePage() {
             <div
               style={{
                 marginTop: '3rem',
-                marginBottom: '-1rem',
-                padding: '2rem',
+                padding: '1.5rem',
               }}
             >
               <Newsletter />
