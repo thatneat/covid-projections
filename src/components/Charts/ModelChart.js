@@ -83,6 +83,7 @@ const ModelChart = ({
     marker: {
       symbol: 'circle',
     },
+    visible: currentIntervention == INTERVENTIONS.LIMITED_ACTION
   };
 
   const socialDistancing = {
@@ -288,7 +289,7 @@ const ModelChart = ({
               placement="bottom"
             >
               <span>
-                <strong>Last updated April 2nd</strong>.{' '}
+                <strong>Last updated April 4th</strong>.{' '}
               </span>
             </LightTooltip>
             This model updates every 24 hours and is intended to help make fast
