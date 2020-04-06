@@ -9,8 +9,8 @@ const Newsletter = () => {
         className="mj-w-res-iframe"
         frameBorder="0"
         scrolling="no"
-        marginHeight="0"
-        marginWidth="0"
+        marginHeight={0}
+        marginWidth={0}
         src="https://app.mailjet.com/widget/iframe/1dtU/pZV"
         width="100%"
       ></iframe>
