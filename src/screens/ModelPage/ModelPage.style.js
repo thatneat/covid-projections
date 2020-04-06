@@ -3,6 +3,7 @@ import Button from '@material-ui/core/Button';
 
 export const EmbedButton = styled(Button)`
   height: 40px;
+  font-weight: ${props => (props.bolder ? '800' : 'inherit')};
 `;
 
 export const Wrapper = styled.div``;

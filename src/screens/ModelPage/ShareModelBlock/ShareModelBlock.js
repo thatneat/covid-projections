@@ -7,8 +7,7 @@ import {
   TwitterIcon,
   LinkedinIcon,
 } from 'react-share';
-import Snackbar from '@material-ui/core/Snackbar';
-import { CopyToClipboard } from 'react-copy-to-clipboard';
+
 import {
   ShareButtonContainer,
   ShareContainer,
@@ -16,9 +15,11 @@ import {
   ShareSpacer,
   EmbedButton,
 } from './../ModelPage.style';
+import EmbedPreview from './EmbedPreview';
+
 import { STATES } from 'enums';
 
-const ShareModelBlock = ({ location, county, embedSnippet }) => {
+const ShareModelBlock = ({ location, county }) => {
   const locationName = STATES[location];
   const countyName = county && county.county;
   const displayName = countyName
@@ -29,7 +30,7 @@ const ShareModelBlock = ({ location, county, embedSnippet }) => {
   }`;
   const shareQuote = `This is the point of no return for intervention to prevent ${displayName}'s hospital system from being overloaded by Coronavirus: `;
   const hashtag = 'COVIDActNow';
-  const [embedCopySuccess, setEmbedCopySuccess] = useState(false);
+  const [showEmbedPreviewModal, setShowEmbedPreviewModal] = useState(false);
   const trackShare = target => {
     window.gtag('event', 'share', {
       event_label: target,
@@ -78,23 +79,20 @@ const ShareModelBlock = ({ location, county, embedSnippet }) => {
 
         <ShareSpacer />
 
-        <CopyToClipboard
-          text={embedSnippet}
-          onCopy={() => setEmbedCopySuccess(true)}
+        <EmbedButton
+          variant="contained"
+          onClick={() => setShowEmbedPreviewModal(true)}
+          disableElevation
         >
-          <EmbedButton variant="contained" disableElevation>
-            Embed
-          </EmbedButton>
-        </CopyToClipboard>
+          Embed
+        </EmbedButton>
       </ShareButtonContainer>
-      <Snackbar
-        message="Embed code copied!"
-        open={embedCopySuccess}
-        autoHideDuration={3000}
-        onClose={() => setEmbedCopySuccess(false)}
-        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+      <EmbedPreview
+        open={showEmbedPreviewModal}
+        onClose={() => setShowEmbedPreviewModal(false)}
       />
     </ShareContainer>
   );
 };
+
 export default ShareModelBlock;
