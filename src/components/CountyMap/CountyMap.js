@@ -10,13 +10,13 @@ import ReactTooltip from 'react-tooltip';
 import STATE_CENTERS from '../../enums/us_state_centers';
 import { FIPS_CODE_TO_CALCULATED_INTERVENTION_COLOR } from 'enums/interventions';
 
-const CountyMap = ({
+export function CountyMapInner({
+  location,
+  stateSummary,
+  fill,
   selectedCounty,
   setSelectedCounty,
-  fill,
-  stateSummary = {},
-}) => {
-  const { id: location } = useParams();
+}) {
   const _location = location.toUpperCase();
   const state = STATE_CENTERS[_location];
   const counties = require(`./countyTopoJson/${_location.toUpperCase()}.json`);
@@ -93,6 +93,22 @@ const CountyMap = ({
       <ReactTooltip>{content}</ReactTooltip>
     </div>
   );
+}
+
+const CountyMap = ({
+  selectedCounty,
+  setSelectedCounty,
+  fill,
+  stateSummary = {},
+}) => {
+  const { id: location } = useParams();
+  return CountyMapInner({
+    location,
+    stateSummary,
+    fill,
+    selectedCounty,
+    setSelectedCounty,
+  });
 };
 
 export default CountyMap;

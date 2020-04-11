@@ -54,12 +54,12 @@ export default {
     Longitude: -75.5071,
     scale: 15000,
   },
-  DC: {
-    'Province/State': 'District of Columbia',
-    StateCode: 'DC',
-    Latitude: 38.8974,
-    Longitude: -77.0268,
-  },
+  // DC: {
+  //   'Province/State': 'District of Columbia',
+  //   StateCode: 'DC',
+  //   Latitude: 38.8974,
+  //   Longitude: -77.0268,
+  // },
   FL: {
     'Province/State': 'Florida',
     StateCode: 'FL',
@@ -73,12 +73,12 @@ export default {
     Longitude: -83.6431,
     scale: 6000,
   },
-  GU: {
-    'Province/State': 'Guam',
-    StateCode: 'GU',
-    Latitude: 13.4443,
-    Longitude: 144.7937,
-  },
+  // GU: {
+  //   'Province/State': 'Guam',
+  //   StateCode: 'GU',
+  //   Latitude: 13.4443,
+  //   Longitude: 144.7937,
+  // },
   HI: {
     'Province/State': 'Hawaii',
     StateCode: 'HI',
@@ -265,12 +265,12 @@ export default {
     Longitude: -77.5098,
     scale: 7000,
   },
-  PR: {
-    'Province/State': 'Puerto Rico',
-    StateCode: 'PR',
-    Latitude: 18.2208,
-    Longitude: -66.5901,
-  },
+  // PR: {
+  //   'Province/State': 'Puerto Rico',
+  //   StateCode: 'PR',
+  //   Latitude: 18.2208,
+  //   Longitude: -66.5901,
+  // },
   RI: {
     'Province/State': 'Rhode Island',
     StateCode: 'RI',
@@ -319,12 +319,12 @@ export default {
     Longitude: -72.7107,
     scale: 8000,
   },
-  VI: {
-    'Province/State': 'Virgin Islands, U.S.',
-    StateCode: 'VI',
-    Latitude: 18.3358,
-    Longitude: -64.8963,
-  },
+  // VI: {
+  //   'Province/State': 'Virgin Islands, U.S.',
+  //   StateCode: 'VI',
+  //   Latitude: 18.3358,
+  //   Longitude: -64.8963,
+  // },
   VA: {
     'Province/State': 'Virginia',
     StateCode: 'VA',

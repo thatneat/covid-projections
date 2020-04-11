@@ -14,6 +14,7 @@ import Embed from 'screens/Embed/Embed';
 import CompareModels from 'screens/CompareModels/CompareModels';
 import AppBar from 'components/AppBar/AppBar';
 import Footer from 'components/Footer/Footer';
+import AllCountyMaps from 'components/CountyMap/AllCountyMaps';
 import theme from 'assets/theme';
 
 export default function App() {
@@ -45,6 +46,8 @@ export default function App() {
             <Route path="/terms" component={Terms} />
             <Route path="/privacy" component={Privacy} />
             <Route path="/compare" component={CompareModels} />
+
+            <Route exact path="/debug/state-maps" component={AllCountyMaps} />
 
             <Route exact path="/embed/us/:id" component={Embed} />
             <Route
